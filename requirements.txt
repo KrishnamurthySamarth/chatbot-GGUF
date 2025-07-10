@@ -1,0 +1,7 @@
+faiss-cpu
+sentence_transformers
+llamma-cpp-python
+pymupdf4llm
+pydantic
+fastapi
+uvicorn
