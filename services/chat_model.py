@@ -1,9 +1,10 @@
 from llama_cpp import Llama
 from dotenv import load_dotenv
 import os
-import time
+from services.vector_stores import FaissStore
 
 load_dotenv()
+store = FaissStore()
 
 class ChatPhi():
     
@@ -16,11 +17,13 @@ class ChatPhi():
                 use_mmap=True,
                 use_mlock=True, 
             )
-        
-    def get_response(self, query : str, context : str):
+
+    def get_response(self, query : str, re_rank : bool):
+        intial_content = store.search_store(query=query)
+        context = store.re_ranker(intial_content)
         for chunk in self.llm(
             f"<|user|>\nUse context to answer below question : {context} /n Question : {query}<|end|>\n<|assistant|>", 
-            max_tokens=100, 
+            max_tokens=500, 
             temperature=0, 
             stream=True
             ):
