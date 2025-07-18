@@ -1,11 +1,12 @@
 import pymupdf4llm
 import os
 
-def get_text_from_pdf():
-    path = os.path.join(os.getcwd(), "data", "pdf")
+def get_text_from_pdf(path):
     md_text = pymupdf4llm.to_markdown(path)
-    text_path = "/text_from_pdf"
-    with open(text_path) as f:
+    text_dir = "data"
+    os.makedirs(text_dir, exist_ok=True)
+    file_path = os.path.join(text_dir, "text_from_pdf.txt")
+    with open(file_path, "w", encoding="utf-8") as f:
         f.write(md_text)
-    return text_path
+    return file_path
 

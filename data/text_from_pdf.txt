@@ -1,0 +1,915 @@
+DISEASE AND DISEASE TRANSMISSION
+
+# Chapter 2 Disease and disease transmission
+
+
+An enormous variety of organisms exist, including some which can survive and
+even develop in the body of people or animals. If the organism can cause
+infection, it is an infectious agent. In this manual infectious agents which cause
+infection and illness are called pathogens. Diseases caused by pathogens, or the
+toxins they produce, are communicable or infectious diseases [(45)] . In this manual
+these will be called disease and infection.
+
+
+This chapter presents the transmission cycle of disease with its different elements,
+and categorises the different infections related to WES.
+
+## **2.1 Introduction to the transmission cycle of disease**
+
+
+To be able to persist or live on, pathogens must be able to leave an infected host,
+survive transmission in the environment, enter a susceptible person or animal, and
+develop and/or multiply in the newly infected host.
+
+
+The transmission of pathogens from current to future host follows a repeating
+cycle. This cycle can be simple, with a direct transmission from current to future
+host, or complex, where transmission occurs through (multiple) intermediate
+hosts or vectors.
+
+
+This cycle is called the transmission cycle of disease, or transmission cycle. The
+transmission cycle has different elements:
+
+
+� The pathogen: the organism causing the infection
+
+� The host: the infected person or animal ‘carrying’ the pathogen
+
+� The exit: the method the pathogen uses to leave the body of the host
+
+� Transmission: how the pathogen is transferred from host to susceptible person
+or animal, which can include developmental stages in the environment, in
+intermediate hosts, or in vectors
+
+
+7
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+� The environment: the environment in which transmission of the pathogen
+takes place.
+
+� The entry: the method the pathogen uses to enter the body of the susceptible
+person or animal
+
+� The susceptible person or animal: the potential future host who is receptive to
+the pathogen
+
+
+To understand why infections occur in a particular situation, and to know how to
+prevent them, the transmission cycles of these infections must be understood. The
+rest of this chapter looks at the elements of the transmission cycle in more detail.
+
+
+
+
+
+
+
+
+
+8
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+## **2.2 The pathogen**
+
+The pathogen is the organism that causes the infection. [*] Specific pathogens cause
+specific infections. Cholera is caused by the bacterium _Vibrio cholerae_, for
+example, and Leishmaniasis is caused by different species (spp.) of the protozoa
+_Leishmania_ .
+
+
+Specific infections also have specific transmission cycles. To be able to react
+appropriately to health problems in a population, the specific infection causing the
+problems must be known. Identification of the infection will usually be done by
+medical personnel.
+
+
+Different categories of pathogens can infect humans. The pathogens causing the
+diseases covered in this manual include viruses, bacteria, rickettsiae, fungi, protozoa, and helminths (worms). All pathogens go through a lifecycle, which takes the
+organism from reproducing adult to reproducing adult. This cycle includes phases
+of growth, consolidation, change of structure, multiplication/reproduction, spread,
+and infection of a new host. The combination of these phases is called the
+development of the pathogen.
+
+
+Two terms are commonly used to describe pathogens leaving the host through
+faeces or urine: latency and persistence.
+
+
+After excretion, a latent pathogen must develop in the environment or intermediate host before a susceptible person or animal can be infected. During the latent
+period the pathogen is not infectious. A non-latent pathogen does not need to go
+through a development, and can cause infection directly after being excreted.
+
+
+Persistency describes how long a pathogen can survive in the environment. A
+persistent pathogen remains viable for a long period outside the host (perhaps
+months), while a non-persistent pathogen remains viable for only a limited period
+(6) (days, or weeks).
+
+
+Active immunity is the resistance the person or animal develops against the
+pathogen after overcoming infection or through immunisation (vaccination). [(45)] .
+Depending on the pathogen, the effectiveness of active immunity often decreases
+over time.
+
+
+- It is important to realise that not all infections will result in disease. While a pathogen may cause illness in one
+person, it may be killed or cause asymptomatic infection in another.
+
+
+9
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+Usually immunity only develops against the specific pathogen that caused the
+infection. If there are different types (serotypes or strains) of the same pathogen
+(e.g. in dengue fever and scrub typhus), immunity will often only develop against
+the particular type which caused the infection. The person or animal can still
+develop the illness when infected with another serotype or strain of the pathogen [(3)] .
+
+
+Table 2.1 presents the different categories of pathogenic organisms with some of
+their characteristics, including latency, persistence, and immunity. The information is general, and exceptions can occur.
+
+## **2.3 The host**
+
+
+The host is the person or animal infected by the pathogen. The importance of the
+host in the transmission cycle is its roles as both reservoir and source of patho
+gens.
+
+
+There are two types of host: definitive and intermediate host. The definitive host is
+the person or animal infected with the adult, or sexual, form of the pathogen. In
+the infections covered here, people are usually the definitive host. To keep things
+simple the definitive host is called just ‘the host’.
+
+
+The intermediate host is an animal or person infected by a larval, or asexual, form
+of the pathogen [(3)] . Cysticercosis and hydatid disease are the only infections
+covered here for which people are the intermediate host. Where intermediate host
+is meant, this term is used. Of the infections covered here, only helminths have
+both definitive and intermediate hosts. All other pathogens only have definitive
+hosts, although vectors function technically as intermediate hosts for protozoa.
+
+
+_**Zoonosis: transmission from animal to person**_
+Some pathogens are specific to humans, others to animals. Many pathogens are
+less specific and can infect both people and animals. Infections that can naturally
+be transmitted from animal to person are called zoonoses [(3)] . Zoonoses are very
+common; over half of the infections covered in this manual are zoonoses. Many of
+these infections normally occur in an animal cycle, with people being infected by
+chance.
+
+
+The problem with zoonoses is that a continuous reservoir of pathogens exists
+outside humans. Even if all human infections were cured and transmission to
+
+people stopped, the presence of an animal reservoir would remain a continuous
+risk to people.
+
+
+10
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+
+
+
+
+
+
+
+
+
+
+
+|Table 2.1. Categories of pathogenic organisms and their characteristics|Col2|Col3|Col4|Col5|
+|---|---|---|---|---|
+|**_Pathogen_**<br>**Virus**|**_Description_**<br>Particles invade living<br>cells. The pathogen<br>needs structures in<br>these cells to<br>reproduce.(45)|**_Latency_**<br>The pathogens<br>are non-latent.|**_Persistence_**<br>Viruses can<br>survive for<br>months in<br>tropical<br>temperatures.<br>(28)|**_Additional_**<br>**_information_**<br>Where vector-<br>borne,<br>transmission to<br>offspring is<br>possible(3) .<br>The immunity is<br>often long-<br>lasting.(73)|
+|**Rickettsiae**|Organisms resemble<br>bacteria.(45).<br>However, similar to<br>viruses, the pathogen<br>needs to develop<br>inside the cells of the<br>host.(2)|n/a|n/a|Transmission of<br>the pathogen to<br>the offspring of<br>the vector<br>occurs.(73) . The<br>immunity is<br>usually long-<br>lasting.(3)|
+|**Bacteria**|Bacteria are single cell<br>organisms. They are<br>considered more<br>primitive than animal<br>or plant cells.(45)|The pathogens<br>are non-latent.|Persists up to<br>several weeks.<br>(16,73). Can<br>multiply outside<br>the host.(3)|The immunity<br>developed is<br>often<br>incomplete or<br>short-lived.(3)|
+|**Fungi**|A group of organisms<br>which include yeast,<br>moulds, and<br>mushrooms.(45)|n/a|n/a|The duration of<br>the immunity is<br>variable.(3)|
+|**Protozoa**|Protozoa area single<br>cell organisms.(45)|The pathogens<br>are non-latent.|Forms a<br>resistant cyst<br>which can<br>survive for<br>months.(3,44)|The immunity is<br>only maintained<br>by repeated<br>infections or<br>vaccinations.(73)|
+|**Helminths**<br>**(worms)**|Helminths are worms<br>(roundworms, flukes or<br>tapeworms)(45). Often<br>male and female must<br>meet in host to<br>reproduce, and<br>sometimes they<br>multiply in<br>intermediate hosts.|The pathogen is<br>latent. It  often<br>has a complex<br>lifecycle with a<br>development in<br>the environment<br>or intermediate<br>hosts.(73)|The pathogen is<br>persistent and<br>some may<br>survive for years<br>in the<br>environment.<br>(3, 16)|Usually no<br>immunity is built<br>up against the<br>pathogen.(3)|
+
+
+n/a: Not applicable as the pathogens are not excreta-related.
+
+
+11
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+Prevention of zoonoses often includes control of animal hosts. This is possible by
+reducing the number of hosts (e.g. controlling rats), immunising domestic animals, or avoiding unnecessary contact with host animals.
+
+
+_**Carriers: hosts without obvious illness**_
+
+A person or animal who develops an illness is an obvious example of a host. It is
+very common, however,for infections to occur without the disease developing.
+The person or animal infected can potentially spread the pathogen, but does not
+show clear symptoms [(8)] . The symptoms may be mild, or may be completely
+absent.
+
+
+These hosts are called carriers, or asymptomatic carriers. Table 2.2 shows some
+infections that are frequently mild or asymptomatic. The host can be infectious for
+a short period in transient carriers, or over a prolonged period in a chronic
+carrier [(3)] . Incubating carriers have been infected and can spread the pathogen, but
+do not yet show the symptoms of the illness. Convalescent carriers continue to
+spread the pathogen even though they have recovered from illness.
+
+
+In many infections carriers play an important role in transmitting the pathogen. It
+is usually not possible to identify asymptomatic carriers [(73)], and unless the family
+and other close contacts of the sick person or even the whole population can be
+treated, carriers will remain a threat to the health of those surrounding them.
+
+
+
+
+
+|Table 2.2. Examples of infections with asymptomatic carriers|Col2|
+|---|---|
+|**_Infection_**|**_Asymptomatic infections_**|
+|Bacillary dysentery<br>Cholera (El Tor)<br>Giardiasis<br>Polio<br>Typhoid fever<br>Schistosomiasis<br>Hookworm<br>Yellow fever<br>Japanese Encephalitis<br>Filariasis<br>Malaria<br>River blindness<br>Plague|common(3)<br>only 1 in 30-50 infections develops illness(16)<br>1 in 2-4 infections develops illness(44)<br>very common<br>very common(73)<br>very common(16)<br>very common<br>common(3)<br>only 1 in 1,000 infections develops illness(44)<br>very common<br>common(3)<br>common(2)<br>common during epidemics(73)|
+
+
+12
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+
+_**Other reservoirs of pathogens**_
+Besides hosts, there are several other pathogen reservoirs that can play a role in
+the transmission of disease. Some pathogens are very resistant, and can survive in
+the environment for considerable time. Though this will normally be an exception, roundworm eggs can remain viable in soil for years [(3)] .
+
+
+Intermediate hosts may be important reservoirs of pathogens, and several helminths
+can even multiply in the intermediate host.
+
+
+Vectors are usually infectious for life, and several pathogens can be transmitted to
+the offspring of the vector over several generations [(2)] . A soft tick, for example, can
+survive for more than five years and can pass to its offspring the pathogen which
+causes tick-borne relapsing fever [(73)] .
+
+
+Some pathogens can live their entire lifecycle outside the host. These include
+threadworm and several faecal-oral bacteria which cause bacillary dysentery,
+(para)typhoid, and salmonellosis [(3)] .
+
+
+Animal hosts, asymptomatic carriers, and other potential reservoirs of pathogens
+can be important sources of infection, and this must be taken into account when
+trying to control disease. The whole population at risk may have to be treated, or
+animal hosts controlled. With several diseases these preventive measures will
+have to be maintained over a long period before a reduction in the occurrence of
+the infection will be noticeable.
+
+## **2.4 Transmission of disease**
+
+
+To survive as a species, pathogens must infect new people or animals. To do this,
+they must leave the body of the host, find their way to a new susceptible person or
+animal, and enter the body of that person or animal. As the exit, transmission, and
+entry of the pathogens are closely associated, we will cover them together.
+
+
+Water and environmental sanitation interventions that aim to improve the health
+of a population usually try to reduce the risk of transmission of infection. To do
+this appropriately, the WES specialist needs to be familiar with the pathogens’
+transmission route(s). It is this understanding that enables the specialist to determine which control measures will be most effective in a particular situation.
+
+
+As many infections are linked to WES, it is useful to categorise the different
+diseases.
+
+
+13
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+For a water and sanitation specialist the most useful categorisation is based on the
+transmission cycles of the infections. Generally speaking, diseases with similar
+transmission cycles can be controlled by similar preventive measures, and will
+occur in similar environments.
+
+
+The infections are categorised and their transmission routes described at the same
+time. More information on the transmission routes and potentially effective
+preventive measures of specific diseases can be found in Annexe 1.
+
+
+Some terms relating to the transmission or classification of infections are defined
+here:
+
+
+**Food-borne infections:** infections which can be transmitted through eating food
+containing the pathogen.
+
+
+**Vector-borne infections:** infections transmitted through vectors. We use vectorborne infections only for infections with a _biological vector_, that is a vector in
+which the pathogen goes through a development before further transmission is
+possible (e.g. mosquitoes, tsetse fly, body louse). We do not classify as vectorborne those infections which are transmitted by _mechanical vectors_, that is the
+animal is only a vehicle for transporting the pathogen (e.g. domestic flies,
+cockroaches).
+
+
+**Water-borne infections:** infections which can be transmitted through drinkingwater which contains the pathogen.
+
+
+**Water-washed infections:** infections caused by pathogens whose transmission
+can be prevented by improving personal hygiene.
+
+
+Infections can have either direct or indirect transmission routes.
+
+
+**2.4.1** **Infections with direct transmission**
+
+A pathogen with a direct transmission route can infect a susceptible person or
+animal immediately after leaving the host. The pathogen does not need to develop
+in the environment, in an intermediate host, or in a vector.
+
+
+In faecal pathogens these are the non-latent infectious agents.
+
+
+This group contains three disease-groups: faecal-oral infections, leptospirosis,
+and infections spread through direct contact.
+
+
+14
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+
+_**2.4.1.1**_ _**Faecal-oral infections**_
+
+These pathogens leave the host through faeces, and enter the susceptible person or
+animal through ingestion. Transmission occurs mainly through direct contact with
+contaminated fingers; food contaminated directly with excreta, contaminated
+hands, domestic flies, soil, or water; contaminated drinking-water; or contaminated soil. Faecal-oral infections are food-borne, water-borne, and water-washed.
+As faecal-oral infections are transmitted directly, any route that will take matter
+polluted with faeces directly or indirectly to somebody’s mouth could potentially
+transmit the pathogen. Figure 2.2 shows some common transmission routes of
+faecal-oral infections.
+
+
+Some of these infections have mainly animal hosts, while others are limited to
+humans. Faecal-oral infections include diarrhoeal diseases such as cholera and
+
+bacillary dysentery, typhoid, hepatitis A, and poliomyelitis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+_**2.4.1.2**_ _**Leptospirosis**_
+The main reservoir of leptospirosis is normally rats, though many other animals
+can potentially transmit the infection. The pathogen leaves the animal host
+through urine. People are usually infected through direct skin contact with water,
+moist soil, or vegetation contaminated with urine from infected animals. Other
+ways of transmission are direct contact with body tissues of infected animals or
+ingesting food contaminated with urine. Transmission from person to person is
+rare [(3)] .
+
+
+_**2.4.1.3**_ _**Infections of direct contact**_
+
+All the diseases covered in this manual that fall into this category are infections
+which affect the skin or eyes. Pathogens are present on the skin or in the
+discharges of affected body parts or eyes. The pathogens are transmitted directly
+through contaminated hands, clothes, domestic flies, or any other contaminated
+material.
+
+
+The pathogen enters the body through skin or mucous membranes such as the
+eyes. These infections are associated with poor personal hygiene and are waterwashed.
+
+
+Few of these infections have animal hosts. The diseases in this category include
+conjunctivitis, trachoma, yaws, and scabies.
+
+
+**2.4.2** **Infections with indirect transmission**
+
+A pathogen with an indirect transmission route must go through a development
+phase outside the host before it can infect a new susceptible person or animal. This
+development will take place in a specific intermediate host, vector, or type of
+environment.
+
+
+This need to go through a particular organism or environment gives the transmission route a focus, which preventive measures can target, for example by vector
+control or improved food preparation.
+
+
+In the faecal pathogens these are the latent infectious agents.
+
+
+The disease-groups with indirect transmission are soil-transmitted helminths,
+water-based helminths, beef/pork tapeworm infection, Guinea-worm infection,
+and vector-borne infections.
+
+
+16
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+
+_**2.4.2.1**_ _**Soil-transmitted helminths**_
+
+These worms leave the body through faeces as eggs or larvae. After excretion they
+have to develop in soil. They can be further divided based on how the pathogen
+enters the human body.
+
+
+**Entrance by penetration of the skin:** the pathogen enters the body through skin
+which is in direct contact with contaminated soil. This is the method used by
+hookworms and threadworms.
+
+
+**Entrance by ingestion:** if either contaminated soil, or food or hands contaminated with polluted soil come into contact with the mouth, the pathogen can be
+transmitted. These infections can be food-borne and water-washed. This method
+
+is used by roundworms and whipworms.
+
+
+The infections covered here do not have animal hosts. Figure 2.3 presents the
+transmission routes of the soil-transmitted helminths.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+_**2.4.2.2**_ _**Water-based helminths**_
+
+These pathogens leave the body through excreta. The infectious agents must
+develop in intermediate hosts living in freshwater. The transmission of these
+infections is therefore only possible if excreta containing the pathogens reaches
+fresh surface water in which there are suitable intermediate host(s). Based on
+transmission cycle, this category can be sub-divided in two groups:
+
+
+**Schistosomiasis.** After excretion, the pathogen infects a freshwater snail, in
+which it develops and multiplies. The snail releases the pathogens into the
+water, and people are infected when these pathogens penetrate skin which is in
+direct contact with infected freshwater. Only one type of schistosomiasis
+(which occurs only in Asia) has an important reservoir in an animal host; all
+other types have people as the only host of importance.
+
+
+**Water-based helminths** with two water-based intermediate hosts. The first inter
+mediate host is a freshwater snail or copepod. The second intermediate host is
+a freshwater plant, fish, or crabs/crayfish. The intermediate hosts are specific to
+the pathogen. These infections are food-borne and people become infected
+when they eat the second intermediate host without properly cooking it. All
+these infections affect both animals and people. These diseases include
+opisthorchiasis, clonorchiasis, and lung fluke disease.
+
+
+The transmission routes of the water-based helminths are presented in Figure 2.4.
+
+
+_**2.4.2.3**_ _**Beef/pig tapeworm infection**_
+The pathogens leave the person through faeces. The excreted eggs then have to be
+ingested by either cattle or pigs. Once the pathogen is ingested by the animal, it
+will develop in the body of the cow or pig. The infections are food-borne and
+people become infected when they eat undercooked beef or pork containing the
+pathogen. People are the only hosts to the infection.
+
+
+A dangerous complication called cysticercosis is possible when people ingest the
+eggs of the pig tapeworm. The pathogen will form cysts throughout the person’s
+body. Transmission of this infection is like faecal-oral infections.
+
+
+_**2.4.2.4**_ _**Guinea-worm**_
+
+In this infection the pathogen, a large worm, creates a blister on the person’s skin,
+which erupts when it comes into contact with water, releasing the worm’s larvae.
+These larvae then infect a copepod ( _Cyclops_ ), in which it develops. The disease is
+water-borne. People become infected by drinking water containing _Cyclops,_ and
+
+
+18
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+
+
+
+
+
+
+
+
+19
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+
+
+
+
+
+
+
+are the only host to this infection. Figure 2.5 shows the transmission route of
+Guinea-worm.
+
+
+_**2.4.2.5**_ _**Vector-borne diseases**_
+
+These infections are transmitted by vectors. Vectors are arthropods (insects, ticks,
+or mites) which can transmit infections from host to future host [(73)] . The pathogen
+exists in the blood or skin of the host. The vector becomes infected when it feeds
+
+on a host. The pathogen develops and multiplies inside the vector, which then
+becomes infectious. People are usually infected through the bite of an infectious
+vector, though other ways of entry are possible. With several vector-borne diseases animal hosts are important reservoirs. Vector-borne diseases include yellow
+fever, malaria, sleeping sickness, plague, epidemic louse-borne typhus fever, and
+louse-borne relapsing fever.
+
+
+20
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+## **2.5 The environment**
+
+
+The environment is everything that surrounds the pathogen in its transmission
+from host to susceptible person or animal. Obviously the environment is a vast
+subject, and we can only look at some of the more important environmental
+factors here.
+
+
+Interventions which involve WES will often modify the environment to try to
+reduce the transmission risk.
+
+
+The environmental factors that we will look at here are climate, landscape, human
+surroundings, and human behaviour. Environmental factors are often associated,
+for example higher altitudes result in lower temperatures, landscapes are formed
+by the climate.
+
+
+**2.5.1** **The climate**
+
+The climate and its seasonal changes play an important role in disease transmission. The presence of vectors and intermediate hosts often depends on rain and
+temperature.
+
+
+The climatological requirements of the vector or intermediate hosts can predict
+whether an infection is likely to be a problem in an area. Malaria, for example,
+will normally not occur in temperatures below 16°C and infection is thus unlikely
+at altitudes above 2,000 metres.
+
+
+In general, direct sunlight, a dry environment, and high temperatures will reduce
+the survival times of pathogens in the environment.
+
+
+Conditions may not be suitable to transmission year round, and many infections
+are seasonal, occurring when the environment is favourable to transmission.
+Mosquito-borne infections, like malaria and yellow fever, are linked to the rainy
+season [(16,44)] . The occurrence of diarrhoeal diseases often increases with the first
+
+rains after the dry season, as faecal pollution is washed into rivers. Ponds which
+disappear in the dry season may in the wet season contain water with snails that
+will transmit schistosomiasis [(73)] .
+
+
+The climate influences human behaviour. In cold climates people will crowd
+together and wear more clothing. If this is combined with poor personal hygiene
+the the body-louse, vector of louse-borne typhus fever and louse-borne relapsing
+fever, can thrive.
+
+
+21
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+In warmer climates children are also likely to play in surface water, where they can
+be infected with schistosomiasis.
+
+
+**2.5.2** **The landscape**
+The landscape consists of the larger physical structures in the environment. These
+structures are usually natural, but can be man-made. They include mountains,
+deserts, rivers, jungle, artificial water reservoirs, and deforested areas. Aspects of
+the landscape that would influence disease transmission most are the microclimate, the presence of water, and types of vegetation.
+
+
+Man-made modifications of the landscape often increase the risk of disease
+transmission by creating a habitat favourable to vectors or intermediate hosts.
+Large artificial water reservoirs frequently increase the occurrence of malaria and
+schistosomiasis [(6)], for example, and introducing irrigation schemes can increase
+the occurrence of schistosomiasis [(15)] .
+
+
+Although the WES specialist working in the field must recognise the risk-factors
+linked to the landscape, he or she will normally not be able to modify the
+landscape to reduce the risks of disease transmission.
+
+
+**2.5.3** **The human surroundings**
+Landscape and human surroundings are closely linked, and it is difficult to divide
+the two clearly. The difference is one of scale; while the landscape normally
+cannot be modified or improved by individual people, individuals can modify the
+human surroundings.
+
+
+Although the landscape will normally be similar for all people living in an area,
+the human surroundings may be very different for people living in the same
+region, village, or even household. Many infections are linked to specific circumstances, and people with specific occupations, socio-economic status, gender, or
+religion may be far more at risk than others. While the father of an African family
+may be exposed to leptospirosis and plague because he works in sugarcane fields
+and regularly traps rats, the mother may be exposed to sleeping sickness as she
+goes to the river to wash clothes, and the children may be exposed to schistosomiasis while playing in the local pond.
+
+
+The human surroundings are created by a combination of natural elements and
+how people have modified these elements.
+
+
+People adapt their surroundings to their needs. If these adaptations are well done,
+they can help to prevent the transmission of disease. In practise they often
+
+
+22
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+
+encourage the transmission of disease, however, as people do not have the space,
+motivation, understanding, time, energy, or financial or material means to do them
+properly.
+
+
+In relation to the WES aspects, human surroundings are concerned with water
+supply, proper handling of excreta, removal of unwanted water, adequate management of solid waste, and control of vectors or intermediate hosts through modification of the environment or change in behaviour.
+
+
+Waste products like excreta, wastewater, and refuse are disposed of in the human
+surroundings. These wastes must be properly managed to prevent them becoming
+a health risk.
+
+
+The WES specialist working in the field will have to know what aspects of the
+human surroundings increase the risk of disease transmission. This will enable
+him or her to determine which aspects play an important role in the transmission
+of disease in a specific situation. Based on this, an intervention can be planned
+which will reduce the health risks to the population. More on the health risks
+relating to the human surroundings, and the components from WES interventions
+can be found in Chapter 5.
+
+
+**2.5.4** **Human behaviour**
+
+People behave in a certain way because they believe that they are making the most
+of their lives. Human behaviour is complex. It is influenced by culture, for
+example religion, attitudes, and traditional beliefs; by social position, such as
+gender or age; by availability of means, for example money, energy, time, or
+material; and by politics.
+
+
+One type of handpump may be acceptable in one culture, but unacceptable in
+another. One type of latrine may be preferred by men, while women or children
+might prefer another. People may not accept things from a government they
+despise, or from an insulting development worker.
+
+
+Having access to a safe water supply, or technically adequate sanitation, does not
+automatically mean people will use them [(25)] . If people do not regard structures as
+acceptable, appropriate, or as an improvement to their quality of life, they will not
+be used, or will not be used to their full potential.
+
+
+Interventions that have only focused on structural improvements have often given
+poor results in controlling infections. Studies in disease prevention indicate that
+the most important factor in reducing the transmission of diseases related to WES
+
+
+23
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+is hygiene improvements resulting from changes in behaviour [(13)] . Changing
+human behaviour in relation to WES should therefore be one of the priorities of
+the WES specialist.
+
+
+The specialist will have to identify existing behaviour, attitudes, and behaviour
+concerning WES and their causes. This will form a base from which health and
+hygiene promotion can be introduced. All interventions should look at human
+behaviour, and where needed, reinforce existing positive behaviour while trying
+to modify behaviour that favours disease transmission.
+
+## **2.6 The future host**
+
+
+The success of a pathogen in infecting a person will depend on:
+
+
+� the infectious dose of the pathogen, and the number of infectious agents which
+manage to enter the potential new host (this applies mainly to faecal-oral
+infections); and
+
+� whether the pathogen can overcome the barriers of the host.
+
+
+These two factors are now considered in more detail.
+
+
+**2.6.1** **The infectious dose**
+
+The infectious dose is the number of pathogens which have to enter the body of a
+susceptible person to cause infection. Although this figure should not be seen as
+exact, it does give an indication of how easily an infection can occur.
+
+
+The infectious dose is normally only used for faecal-oral infections. As every
+larva of a helminth can become an adult worm, worms have a very low infectious
+dose.
+
+
+Table 2.3 gives the infectious doses of several faecal-oral infections.
+
+
+Infections with a low infectious dose are more likely to be spread by direct personto-person contact than infections with a high infectious dose. Measures such as
+improving drinking-water quality, or reducing the concentration of pathogens in
+surface water (for exampleby treating sewage), are more likely to have effect on
+infections with high infectious doses than on those with low ones [(73)] . Intuitively
+one would say that flies are more likely to transmit infections with a low infectious dose, but this is complicated by the fact that several bacteria can multiply in
+food, and thus reach the infectious dose in this way.
+
+
+24
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+
+
+
+
+
+|Table 2.3. Examples of infective doses of faecal-oral diseases|Col2|
+|---|---|
+|**_Disease_**|**_Infectious dose (in number of_**<br>**_pathogens)_**|
+|Bacillary dysentery (shigellosis)(16)<br>Giardiasis(16)<br>Rotaviral enteritis(16)<br>Cholera(73)<br>Typhoid(73)|10 to 100<br>10 to 100<br>100 to 10,000<br>Usually 106 to 108<br>103 to 109|
+
+
+**2.6.2** **The barriers of the body against pathogens**
+The body has a range of mechanisms that prevent a pathogen from causing
+infection.
+
+
+The skin and mucous membranes have anti-microbial substances, and the stomach is acid to act as the first barriers against pathogens. Low acidity in the stomach
+or an open wound (e.g. insect bite, cut, abrasion) can make this barrier ineffective.
+
+
+The next barriers are mechanisms that react to the pathogen, and try to counter its
+development. These barriers are not specific to the pathogen, and the body does
+not need to have been in contact with the pathogen for them to be effective. These
+mechanisms are the host’s resistance against pathogens [(41)] . Resistance is lowered
+if someone is suffering from other infections [(73)], or is malnourished, stressed, or
+fatigued [(41)] . Women have a higher risk of infection when pregnant [(73)] .
+
+
+An individual’s immune system may have experienced a pathogen through an
+earlier infection or immunisation (vaccination) with inactivated pathogens. When
+the pathogens enter the person’s body, their immune system will recognise the
+pathogen and make antibodies which will attack the pathogen. This is called
+active immunity [(45)] . The effectiveness of active immunity depends on the pathogen, and the length of time since the body has been in contact with the pathogen.
+Active immunity is effective only against that particular pathogen. The effectiveness against bacteria and viruses usually lasts for years [(3)] .
+
+
+Passive immunity is created by introducing foreign antibodies into the body. An
+unborn baby receives antibodies from the mother through the placenta, which will
+protect it for some time after birth. Vaccination with antibodies is another way of
+creating passive immunity [(73)] . The foreign antibodies will slowly disappear from
+the body, and passive immunity will usually only last days or months [(3)] .
+
+
+25
+
+
+CONTROLLING AND PREVENTING DISEASE
+
+
+A person or animal who lacks effective barriers (has a poor resistance and/or a low
+immunity) against a pathogen is susceptible to this infectious agent [(45)] .
+
+
+Two important practical points define the susceptibility of a population:
+
+
+� A population that is weakened because of poor nutrition or a high occurrence
+of disease, fatigue, or stress has an increased risk of disease.
+
+� When a pathogen is very common in a population, or the population is
+immunised, most people will have some form of immunity against it. In this
+case the disease will attack mainly children. If the same pathogen is introduced
+into a population which has low immunity, there is a risk of an outbreak (an
+epidemic) which can attack all ages.
+
+
+**2.6.3** **The infection over time**
+
+When a pathogen is introduced in sufficient numbers, and overcomes the resistance and immune system of a person or animal, infection will follow. The time
+between entrance of pathogen and appearance of the first signs of disease or
+symptoms is called the incubation period. As mentioned earlier, not all infections
+will result in disease, and for many infections asymptomatic carriers are common.
+
+
+
+
+|Col1|Col2|
+|---|---|
+|||
+
+
+26
+
+
+DISEASE AND DISEASE TRANSMISSION
+
+
+The period of communicability is the period in which the host is infectious, or the
+period in which pathogens are shed in the environment. The time between
+entrance of pathogen and the onset of communicability is the latent period. This is
+shown on a timeline in Figure 2.6.
+
+
+In some infections the period of communicability starts before illness is apparent.
+Hosts who can transmit the pathogen before showing symptoms are called incubating carriers. If the period of communicability extends beyond the end of the
+illness, the hosts are called convalescent carriers.
+
+
+27
+
+
