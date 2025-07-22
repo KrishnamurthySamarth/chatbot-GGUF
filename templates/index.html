@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Upload PDF</title>
+  <title>Rave</title>
+  <script src="static/app.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h2>Upload a PDF file</h2>
-    <form action="/process_pdf" method="post" enctype="multipart/form-data">
-        <input type="file" name="pdf_file" accept="application/pdf" required>
-        <button type="submit">Upload</button>
-    </form>
+<body class="bg-gray-100 p-6 font-sans">
+
+  <h1 class="text-2xl font-bold mb-4">Rave Chatbot</h1>
+
+  <!-- Upload -->
+  <form id="uploadForm" class="mb-4 flex items-center gap-3" enctype="multipart/form-data">
+    <input type="file" name="pdf_file" required />
+    <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded">Upload PDF</button>
+  </form>
+
+  <!-- Chat -->
+  <form id="chatForm" class="mb-4 flex gap-2">
+    <input type="text" id="queryInput" name="query" placeholder="Ask something..." required class="w-full border px-3 py-2" />
+    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Ask</button>
+  </form>
+
+  <!-- Dual Response -->
+  <div id="responses" class="grid grid-cols-2 gap-4">
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold">Without Re-Ranking</h3>
+      <div id="noRerank"></div>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold">With Re-Ranking</h3>
+      <div id="withRerank"></div>
+    </div>
+  </div>
+
 </body>
 </html>

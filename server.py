@@ -7,29 +7,28 @@ from services.vector_stores import FaissStore
 from pydantic import BaseModel
 import shutil
 import os
+from fastapi.staticfiles import StaticFiles
+
+
 
 app = FastAPI()
 store = FaissStore()
 model = ChatPhi(store=store)
 
-
 templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 class ChatRequest(BaseModel):
     message : str
-    re_ranked : bool
-    compare : bool
 
 @app.get("/", response_class=HTMLResponse)
 def upload_form(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/chat")
-def chatbot(request : ChatRequest):
+async def chatbot(request : ChatRequest):
     message = request.message
-    re_ranked = request.re_ranked
-    to_be_compared = request.compare 
-    model.get_response(query=message, re_rank=re_ranked)
+    return await model.run_parallel(query=message)
     
 @app.post("/process_pdf")
 def pdf_process(pdf_file: UploadFile = File(...)):

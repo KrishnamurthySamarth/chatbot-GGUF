@@ -1,38 +1,48 @@
-from llama_cpp import Llama
-from dotenv import load_dotenv
-import os
-from services.vector_stores import FaissStore
+import httpx
+import asyncio
+import json
 
-load_dotenv()
+
 class ChatPhi():
     
     def __init__(self, store):
-        self.llm = Llama(
-                model_path=os.getenv("model_path"),
-                n_ctx=4000,
-                n_threads=12,
-                n_batch=1024,
-                use_mmap=True,
-                use_mlock=True, 
-            )
+        self.ollama_server = "http://localhost:11434/api/generate"
         self.store = store
+        self.model = "rave"
+    
+    
+    async def _send_request(self, query : str, context : str, label : str):
+        
+        prompt = f"<|user|>\nUse context to answer below question : {context} /n Question : {query}<|end|>\n<|assistant|>"
+        
+        payload = {
+            "model": self.model,
+            "prompt": prompt,
+            "stream": True
+        }
+        
+        with httpx.AsyncClient(timeout=60.0) as client:
+            response = await client.post(self.ollama_server, json=payload)
+            for line in response.iter_lines():
+                if line:
+                    try:
+                        result = json.loads(line.decode("utf-8"))
+                        chunk = result.get("response", "")
+                        print(f"from {label} : {chunk}", end="", flush=True)
+                    except json.JSONDecodeError as e:
+                        print(f"[JSON error]: {e}")
+    
+    async def run_parallel(self, query : str):
+        
+        initial = self.store.search_store(query=query)
+        re_ranked = self.store.re_ranking(query=query, initial_results=initial)
 
-    def get_response(self, query : str, re_rank : bool):
+        ctx_plain = initial[:2]
+        ctx_reranked = re_ranked[:2]
         
-        intial_content = self.store.search_store(query=query)
-        
-        if re_rank:
-            re_rank_context = self.store.re_ranking(query=query, initial_results=intial_content)
-            context = re_rank_context[:2]
-        else:
-            intial_content.sort(key=lambda x:x["score"], reverse=True)
-            context = intial_content[:2]
-            
-            
-        for chunk in self.llm(
-            f"<|user|>\nUse context to answer below question : {context} /n Question : {query}<|end|>\n<|assistant|>", 
-            max_tokens=500, 
-            temperature=0, 
-            stream=True
-            ):
-            print(chunk["choices"][0]["text"], end="", flush=True)
+        t1 = self._send_request(query=query, context=ctx_plain, label="plain")
+        t2 = self._send_request(query=query, context=ctx_reranked, label="re-ranked")
+        result_plain, result_rerank = await asyncio.gather(t1, t2)
+        return {**result_plain, **result_rerank}
+    
+    
