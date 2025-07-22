@@ -1,37 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rave</title>
-  <script src="static/app.js" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rave AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="static/app.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .chat-container {
+            height: calc(100vh - 140px);
+        }
+        
+        .message-bubble {
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        
+        .typing-indicator {
+            opacity: 0;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        .typing-indicator.active {
+            opacity: 1;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+        
+        .file-upload-area {
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload-area:hover {
+            background-color: #f8fafc;
+            border-color: #3b82f6;
+        }
+        
+        .comparison-card {
+            transition: all 0.3s ease;
+        }
+        
+        .comparison-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .input-focus:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+            border-color: #6366f1;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 p-6 font-sans">
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-robot text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold">Rave AI</h1>
+                    <p class="text-sm text-white text-opacity-80">Intelligent Document Assistant</p>
+                </div>
+            </div>
+            <div class="text-sm bg-white bg-opacity-20 px-3 py-1 rounded-full">
+                <i class="fas fa-circle text-green-300 mr-2"></i>
+                Online
+            </div>
+        </div>
+    </header>
 
-  <h1 class="text-2xl font-bold mb-4">Rave Chatbot</h1>
+    <div class="max-w-6xl mx-auto p-4">
+        <!-- Chat Container -->
+        <div class="chat-container bg-white rounded-2xl shadow-lg mb-4 flex flex-col">
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="flex-1 p-6 overflow-y-auto space-y-4">
+                <!-- Welcome Message -->
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-robot text-white text-sm"></i>
+                    </div>
+                    <div class="message-bubble bg-gray-100 p-4 rounded-2xl rounded-tl-md">
+                        <p class="text-gray-800">Welcome to Rave AI! Upload a PDF document and start chatting to get intelligent responses with comparison between plain and re-ranked results.</p>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Upload -->
-  <form id="uploadForm" class="mb-4 flex items-center gap-3" enctype="multipart/form-data">
-    <input type="file" name="pdf_file" required />
-    <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded">Upload PDF</button>
-  </form>
+            <!-- Input Area -->
+            <div class="border-t border-gray-200 p-4">
+                <!-- File Upload Area -->
+                <div id="uploadArea" class="file-upload-area border-2 border-dashed border-gray-300 rounded-xl p-4 mb-4 text-center cursor-pointer">
+                    <input type="file" id="fileInput" name="pdf_file" accept=".pdf" class="hidden" />
+                    <div id="uploadContent">
+                        <i class="fas fa-cloud-upload-alt text-2xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-600 font-medium">Click to upload PDF or drag and drop</p>
+                        <p class="text-sm text-gray-400 mt-1">PDF files only</p>
+                    </div>
+                    <div id="uploadingContent" class="hidden">
+                        <i class="fas fa-spinner fa-spin text-2xl text-blue-500 mb-2"></i>
+                        <p class="text-blue-600 font-medium">Processing PDF...</p>
+                    </div>
+                    <div id="uploadedContent" class="hidden">
+                        <i class="fas fa-check-circle text-2xl text-green-500 mb-2"></i>
+                        <p class="text-green-600 font-medium">PDF uploaded successfully!</p>
+                    </div>
+                </div>
 
-  <!-- Chat -->
-  <form id="chatForm" class="mb-4 flex gap-2">
-    <input type="text" id="queryInput" name="query" placeholder="Ask something..." required class="w-full border px-3 py-2" />
-    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Ask</button>
-  </form>
-
-  <!-- Dual Response -->
-  <div id="responses" class="grid grid-cols-2 gap-4">
-    <div class="bg-white p-4 rounded shadow">
-      <h3 class="font-semibold">Without Re-Ranking</h3>
-      <div id="noRerank"></div>
+                <!-- Message Input -->
+                <form id="chatForm" class="flex items-center space-x-3">
+                    <div class="flex-1 relative">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Upload a PDF first to start chatting..." 
+                            class="input-focus w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl focus:border-indigo-500 transition-colors"
+                            disabled
+                        />
+                        <button 
+                            type="submit" 
+                            id="sendButton"
+                            class="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                            disabled
+                        >
+                            <i class="fas fa-paper-plane text-sm"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="bg-white p-4 rounded shadow">
-      <h3 class="font-semibold">With Re-Ranking</h3>
-      <div id="withRerank"></div>
-    </div>
-  </div>
-
 </body>
 </html>

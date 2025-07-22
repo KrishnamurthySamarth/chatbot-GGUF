@@ -22,21 +22,17 @@ class FaissStore():
             i += self.chunk_size - self.overlap
     
     def insert_documents(self, text_path = "data/text_from_pdf.txt"):
-        print("Inserting")
         
         with open(text_path, "r") as f:
             text = f.read()
             
         self._create_document_chunk(text)
-        print(len(self.chunks))
         
-        print("Encoding")
         text_embeddings = self.embedder.encode(self.chunks, convert_to_numpy=True)
         normalized_embeddings = normalize(text_embeddings, norm='l2')
         dimension = text_embeddings.shape[1]
         self.index = faiss.IndexFlatIP(dimension)
         self.index.add(normalized_embeddings)
-        print("Index size:", self.index.ntotal if self.index else "No index created")
     
     def search_store(self, query, top_k=10):
         
@@ -67,7 +63,6 @@ class FaissStore():
     def re_ranking(self, query, initial_results):
         
         pairs = [[query, item["text"]] for item in initial_results]
-        print(pairs)
         rerank_scores = self.re_ranker.predict(pairs)
         
         re_ranked = []
