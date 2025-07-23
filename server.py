@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, Form, File, Request
+from fastapi import FastAPI, UploadFile, File, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, StreamingResponse
 from services.chat_model import ChatPhi
@@ -9,10 +9,19 @@ import shutil
 import os
 import json
 from fastapi.staticfiles import StaticFiles
+from contextlib import asynccontextmanager
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    index_path = "compute/faiss.index"
 
+    if os.path.exists(index_path):
+        print("Loaded pre-saved FAISS index")
+        store.load_index(index_path=index_path)
+        
+    yield 
 
-app = FastAPI()
+app = FastAPI(lifespan=lifespan)
 store = FaissStore()
 model = ChatPhi(store=store)
 
@@ -29,10 +38,8 @@ def upload_form(request: Request):
 @app.post("/chat")
 async def chatbot(request : ChatRequest):
     message = request.message
-    print(f"▶️ Received query: {message}")
     async def streamer():
         async for text in model.run_parallel(query=message):
-            print("📤 Streaming chunk:", text)
             yield json.dumps(text) + "\n"
     
     return StreamingResponse(streamer(), media_type="text/plain")
@@ -44,11 +51,8 @@ def pdf_process(pdf_file: UploadFile = File(...)):
     file_path = os.path.join(upload_dir, "uploaded.pdf")
 
     with open(file_path, "wb") as f:
-        shutil.copyfileobj(pdf_file.file, f)
-        
-    print("extracting text")
+        shutil.copyfileobj(pdf_file.file, f)   
     get_text_from_pdf("data/uploaded.pdf")
-    print("Storing")
     store.insert_documents()
     
     return {"status": "success", "message": "PDF processed successfully"}

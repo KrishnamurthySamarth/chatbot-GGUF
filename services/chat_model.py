@@ -51,6 +51,7 @@ class ChatPhi():
             traceback.print_exc()
     
     async def run_parallel(self, query : str):     
+        
         initial = self.store.search_store(query=query)
         
         re_ranked = self.store.re_ranking(query=query, initial_results=initial)

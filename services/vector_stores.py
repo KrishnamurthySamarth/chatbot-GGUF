@@ -1,6 +1,5 @@
 import faiss
 from sklearn.preprocessing import normalize
-import numpy as np
 from sentence_transformers import CrossEncoder, SentenceTransformer
 
 class FaissStore():
@@ -33,6 +32,7 @@ class FaissStore():
         dimension = text_embeddings.shape[1]
         self.index = faiss.IndexFlatIP(dimension)
         self.index.add(normalized_embeddings)
+        self._save_index()
     
     def search_store(self, query, top_k=10):
         
@@ -52,13 +52,25 @@ class FaissStore():
         return results
 
     def clear_store(self):
+        
         self.index = None
         
     def store_status(self):
+        
         return {
+            "vector_database" : "Faiss",
             "faiss_indexUsed" : self.index if self.index else None,
             "index_size" : self.index.ntotal if self.index else 0
         }
+    
+    def _save_index(self, index_path="compute/faiss.index"):
+        
+        if self.index is not None:
+            faiss.write_index(self.index, index_path)
+    
+    def load_index(self, index_path = "compute/faiss.index"):
+        
+        self.index = faiss.read_index(index_path)
         
     def re_ranking(self, query, initial_results):
         

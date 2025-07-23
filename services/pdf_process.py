@@ -2,6 +2,7 @@ import pymupdf4llm
 import os
 
 def get_text_from_pdf(path):
+    
     md_text = pymupdf4llm.to_markdown(path)
     text_dir = "data"
     os.makedirs(text_dir, exist_ok=True)
