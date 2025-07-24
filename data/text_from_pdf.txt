@@ -55,6 +55,7 @@ rest of this chapter looks at the elements of the transmission cycle in more det
 
 
 
+
 8
 
 DISEASE AND DISEASE TRANSMISSION
@@ -699,6 +700,8 @@ When a pathogen is introduced in sufficient numbers, and overcomes the resistanc
 between entrance of pathogen and appearance of the first signs of disease or
 symptoms is called the incubation period. As mentioned earlier, not all infections
 will result in disease, and for many infections asymptomatic carriers are common.
+
+
 
 |Col1|Col2|
 |---|---|

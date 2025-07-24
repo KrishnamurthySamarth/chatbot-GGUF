@@ -1,6 +1,8 @@
 import faiss
 from sklearn.preprocessing import normalize
 from sentence_transformers import CrossEncoder, SentenceTransformer
+import pickle
+import os
 
 class FaissStore():
     def __init__(self):
@@ -19,6 +21,17 @@ class FaissStore():
             j = min(i + self.chunk_size , len(text_corpus))
             self.chunks.append(text_corpus[i:j])
             i += self.chunk_size - self.overlap
+        self._save_chunks()
+    
+    def _save_chunks(self, path="compute/chunks.pkl"):
+        with open(path, "wb") as f:
+            pickle.dump(self.chunks, f)
+        print(f"Chunks saved to {path}")
+
+    def load_chunks(self, path="compute/chunks.pkl"):
+        with open(path, "rb") as f:
+            self.chunks = pickle.load(f)
+            print(f"Chunks loaded from {path}")
     
     def insert_documents(self, text_path = "data/text_from_pdf.txt"):
         
@@ -39,6 +52,9 @@ class FaissStore():
         query_embedding = self.embedder.encode([query], convert_to_numpy=True)
         normalized_embedding = normalize(query_embedding, norm="l2")
         
+        if not self.chunks:
+            self.load_chunks()
+        
         scores, indices = self.index.search(normalized_embedding, top_k)
 
         results = []
@@ -54,12 +70,21 @@ class FaissStore():
     def clear_store(self):
         
         self.index = None
+        self.chunks = []
+        os.remove("compute/chunks.pkl")
+        os.remove("compute/faiss.index")
+        os.remove("data/text_from_pdf.txt")
+        os.remove("data/uploaded.pdf")
+        return {
+            "message" : "Cleared"
+        }
+        
         
     def store_status(self):
         
         return {
             "vector_database" : "Faiss",
-            "faiss_indexUsed" : self.index if self.index else None,
+            "faiss_indexUsed" : bool(self.index),
             "index_size" : self.index.ntotal if self.index else 0
         }
     

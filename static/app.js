@@ -1,7 +1,6 @@
 let isUploaded = false;
 let isProcessing = false;
 
-// DOM Elements
 const uploadArea = document.getElementById('uploadArea');
 const fileInput = document.getElementById('fileInput');
 const uploadContent = document.getElementById('uploadContent');
@@ -11,14 +10,68 @@ const messageInput = document.getElementById('messageInput');
 const sendButton = document.getElementById('sendButton');
 const chatForm = document.getElementById('chatForm');
 const chatMessages = document.getElementById('chatMessages');
+const clearButton = document.getElementById('clearButton');
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    await checkDatabaseStatus();
     initializeEventListeners();
 });
 
+if (clearButton) {
+    clearButton.addEventListener('click', async () => {
+        if (confirm("Are you sure you want to clear the database?")) {
+            try {
+                const response = await fetch('/clear_vb', { method: 'POST' });
+
+                if (response.ok) {
+                    uploadedContent.classList.add('hidden');
+                    uploadContent.classList.remove('hidden');
+                    messageInput.disabled = true;
+                    sendButton.disabled = true;
+                    messageInput.placeholder = "Upload a PDF first to start chatting...";
+                    chatMessages.innerHTML = '';
+
+                    alert("Database cleared.");
+                } else {
+                    alert("Failed to clear database.");
+                }
+            } catch (err) {
+                console.error("Clear error:", err);
+                alert("An error occurred while clearing the database.");
+            }
+        }
+    });
+}
+
+async function checkDatabaseStatus() {
+    try {
+        const response = await fetch('/vb_status');
+        const data = await response.json();
+
+        const indexSize = data.index_size || 0;
+
+        if (indexSize > 0) {
+            isUploaded = true;
+            messageInput.disabled = false;
+            sendButton.disabled = false;
+            uploadContent.classList.add('hidden');
+            uploadedContent.classList.remove('hidden');
+            uploadedContent.querySelector('p').textContent = "Database Loaded.";
+            messageInput.placeholder = "Ask me anything about your document...";
+        } else {
+            isUploaded = false;
+            uploadContent.classList.remove('hidden');
+            uploadedContent.classList.add('hidden');
+        }
+    } catch (err) {
+        console.error("Failed to check VB status:", err);
+        isUploaded = false;
+        uploadContent.classList.remove('hidden');
+        uploadedContent.classList.add('hidden');
+    }
+}
+
 function initializeEventListeners() {
-    // File Upload Handling
     uploadArea.addEventListener('click', () => {
         if (!isProcessing) {
             fileInput.click();
@@ -56,14 +109,11 @@ function initializeEventListeners() {
     const message = messageInput.value.trim();
     if (!message || !isUploaded) return;
 
-    // Add user message
     addMessage(message, 'user');
     messageInput.value = '';
 
-    // Add typing indicator
     const typingId = addTypingIndicator();
-    
-    // Add comparison response container and get its ID
+
     const responseId = addComparisonResponse('', '');
     
     try {
@@ -81,7 +131,6 @@ function initializeEventListeners() {
         let decoder = new TextDecoder();
         let buffer = '';
 
-        // Remove typing indicator once we start getting data
         removeTypingIndicator(typingId);
 
         while (true) {
@@ -90,7 +139,7 @@ function initializeEventListeners() {
 
             buffer += decoder.decode(value, { stream: true });
             const lines = buffer.split("\n");
-            buffer = lines.pop(); // Keep the last incomplete line in the buffer
+            buffer = lines.pop();
             
             for (let line of lines) {
                 if (line.trim() === '') continue;
@@ -99,10 +148,8 @@ function initializeEventListeners() {
                     console.log("Received chunk:", line);
                     const data = JSON.parse(line);
                     
-                    // Debug what data looks like
                     console.log("Parsed data:", data);
                     
-                    // Update the response with the new data
                     updateComparisonResponse(responseId, 
                                            data.plain || '', 
                                            data['re-ranked'] || '');
@@ -112,7 +159,6 @@ function initializeEventListeners() {
             }
         }
 
-        // Process any remaining data in the buffer
         if (buffer.trim() !== '') {
             try {
                 const data = JSON.parse(buffer);
@@ -133,7 +179,6 @@ function initializeEventListeners() {
     }
 });
 
-    // Enable input when Enter is pressed
     messageInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
@@ -231,30 +276,26 @@ function addComparisonResponse(plainResponse, rerankedResponse) {
     comparisonDiv.id = responseId;
     
     comparisonDiv.innerHTML = `
-        <div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0">
-            <i class="fas fa-robot text-white text-sm"></i>
-        </div>
-        <div class="flex-1 space-y-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="comparison-card bg-red-50 border border-red-200 p-4 rounded-2xl">
-                    <div class="flex items-center mb-3">
-                        <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-2">
-                        </div>
-                        <h4 class="font-semibold text-red-800">Plain Retrieval</h4>
-                    </div>
-                    <p class="text-gray-700 text-sm leading-relaxed plain-response">${plainResponse}</p>
-                </div>
-                <div class="comparison-card bg-green-50 border border-green-200 p-4 rounded-2xl">
-                    <div class="flex items-center mb-3">
-                        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-2">
-                        </div>
-                        <h4 class="font-semibold text-green-800">Re-Ranked Results</h4>
-                    </div>
-                    <p class="text-gray-700 text-sm leading-relaxed reranked-response">${rerankedResponse}</p>
-                </div>
+    <div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-robot text-white text-sm"></i>
+    </div>
+    <div class="flex-1 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="comparison-card bg-red-50 border border-red-200 p-4 rounded-2xl">
+                <h4 class="text-center text-red-800 text-base font-semibold font-mono mb-2">
+                    Plain Retrieval
+                </h4>
+                <p class="text-gray-700 text-sm leading-relaxed plain-response">${plainResponse}</p>
+            </div>
+            <div class="comparison-card bg-green-50 border border-green-200 p-4 rounded-2xl">
+                <h4 class="text-center text-green-800 text-base font-semibold font-mono mb-2">
+                    Re-Ranked Results
+                </h4>
+                <p class="text-gray-700 text-sm leading-relaxed reranked-response">${rerankedResponse}</p>
             </div>
         </div>
-    `;
+    </div>
+`;
 
     chatMessages.appendChild(comparisonDiv);
     scrollToBottom();

@@ -56,4 +56,12 @@ def pdf_process(pdf_file: UploadFile = File(...)):
     store.insert_documents()
     
     return {"status": "success", "message": "PDF processed successfully"}
+
+@app.get("/vb_status")
+def get_status():
+    return store.store_status()
+
+@app.post("/clear_vb")
+def clear():
+    return store.clear_store()
     
