@@ -34,6 +34,7 @@ Re-ranking helps choose the best chunks from the retrieved ones by scoring them 
 ## How to run the application
 
 - Install [Ollama](https://ollama.com).
+- Clone the repository.
 - Create a directory named `model`.
 -  Download the `phi-3` 4K GGUF model file into the `model` directory.
 -  Create a custom model by running:
