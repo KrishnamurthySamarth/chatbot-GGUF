@@ -1,5 +1,9 @@
 # PDF-Chatbot
 
+<p align="center">
+  <img src="assets/demo.gif" width="700"/>
+</p>
+
 This is a lightweight project that uses a local GGUF model through Ollama to build a chatbot that can answer questions based on the content of a PDF.  
 The goal is to compare simple retrieval-augmented generation (RAG) with and without re-ranking, to evaluate how much re-ranking improves answer quality.
 
