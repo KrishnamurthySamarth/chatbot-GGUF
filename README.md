@@ -1,7 +1,7 @@
 # PDF-Chatbot
 
 <p align="center">
-  <img src="asset/demo.gif" width="700"/>
+  <img src="asset/demo.gif" width="480" height="270"/>
 </p>
 
 This is a lightweight project that uses a local GGUF model through Ollama to build a chatbot that can answer questions based on the content of a PDF.  
